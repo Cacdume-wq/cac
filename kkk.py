@@ -629,13 +629,13 @@ def Main():
                 print(f'\033[1;32mNhập \033[1;33m[\033[1;33m1\033[1;31m] \033[1;32mĐể log vào acc \033[1;35m{user} 💸')
                 print(f'\033[1;32mNhập \033[1;31m[\033[1;33m2\033[1;31m] \033[1;32mĐể nhập access token mới💸')
                 print("\033[1;36m═"*55)
-                chon = Write.Input(f'Nhập Lựa Chọn : ',Colors.green,interval=0.0001)
+                chon = Write.Input(f'Nhập Lựa Chọn : ',Colors.blue,interval=0.0001)
                 if chon == '2':
                     os.remove('configttc.txt')
                 elif chon == '1':
                     pass
                 else:
-                    print(f'\033[1;36mMắt mù à?!!!')
+                    print(f'\033[1;36mMắt mù hay gì mà nhập sai?!')
                     continue
             else:
                 os.remove('configttc.txt')
@@ -652,7 +652,7 @@ def Main():
             sodu = login.json()['data']['sodu']
             sodu = "{:,}".format(int(sodu))
             print("═"*55)
-            print(f"\033[1;32mTên Tài Khoản\033[1;39m: \033[1;33m{user} \033[1;31m| \033[1;32mXu Hiện Tại đang có \033[1;32m: \033[1;33m{sodu}")
+            print(f"\033[1;32mTên TK TTC \033[1;39m: \033[1;33m{user} \033[1;31m| \033[1;32mXu Hiện Tại Đang Có \033[1;32m: \033[1;33m{sodu}")
             print("\033[1;36m═"*55)
             break
         else:
@@ -662,9 +662,9 @@ def Main():
         if os.path.exists('Cookie_FB.txt'):
             print(f'\033[1;32mNhập \033[1;31m[\033[1;33m1\033[1;31m] \033[1;32mĐể Dùng Cookie Trước!!🔫')
             print(f'\033[1;32mNhập \033[1;31m[\033[1;33m2\033[1;31m] \033[1;32mĐể Nhập Lại Cookie Khác!🔫')
-            chon = Write.Input(f'Nhập Lựa Chọn Của Bạn:',Colors.green,interval=0.0001)
+            chon = Write.Input(f'Nhập Lựa Chọn :',Colors.green,interval=0.0001)
             if chon == '1':
-                print('\033[1;32mĐang Lấy Dữ Liệu Đã Lưu')
+                print('\033[1;32mĐang Lấy Dữ Liệu Đã Lưu...')
                 sleep(1)
                 with open('Cookie_FB.txt', 'r') as f:
                     listck = json.loads(f.read())
