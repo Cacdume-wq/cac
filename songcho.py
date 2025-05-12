@@ -53,15 +53,15 @@ def Delay(value):
 	while not(value <= 1):
 		value -= 0.123
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}X    {trang}]''', '               ', end = '\r')
-		sleep(0)
+		sleep(0.010)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [ {vang}X   {trang}]''', '               ', end = '\r')
-		sleep(0)
+		sleep(0.010)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [  {vang}X  {trang}]''', '               ', end = '\r')
-		sleep(0)
+		sleep(0.010)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [   {vang}X {trang}]''', '               ', end = '\r')
-		sleep(0)
+		sleep(0.010)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [    {vang}X{trang}]''', '               ', end = '\r')
-		sleep(0)
+		sleep(0.010)
 def decode_base64(encoded_str):
 	decoded_bytes = base64.b64decode(encoded_str)
 	decoded_str = decoded_bytes.decode('utf-8')
@@ -581,12 +581,12 @@ def Nhap_Cookie():
     return listck
 
 def Nhap_Setting():
-    apikey = input(f'{thanh} {luc}Nhập Apikey 3xcaptcha Để Auto Add Cấu Hình (Enter để bỏ qua){trang}: {vang}')
+    apikey = input(f'{thanh} {luc}Nhập Apikey 3xcaptcha Để Auto Add Cấu Hình (Enter để bỏ qua nếu kh có){trang}: {vang}')
     min = int(input(f'{thanh} {luc}Nhập Delay Min{trang}: {vang}'))
     max = int(input(f'{thanh} {luc}Nhập Delay Max{trang}: {vang}'))
-    nvblock = int(input(f'{thanh} {luc}Sau Bao Nhiêu Nhiệm Vụ Thì Chống Block{trang}: {vang}'))
-    delaybl = int(input(f'{thanh} {luc}Sau {vang}{nvblock} {luc}Nhiệm Vụ Thì Nghỉ Ngơi{trang}: {vang}'))
-    doinick = int(input(f'{thanh} {luc}Sau Bao Nhiêu Nhiệm Vụ Thì Đổi Nick{trang}: {vang}'))
+    nvblock = int(input(f'{thanh} {luc}Sau Bao Nhiêu Job Thì Chống Block{trang}: {vang}'))
+    delaybl = int(input(f'{thanh} {luc}Sau {vang}{nvblock} {luc}Job Thì Nghỉ Ngơi{trang}: {vang}'))
+    doinick = int(input(f'{thanh} {luc}Sau Bao Nhiêu Job Thì Đổi Nick{trang}: {vang}'))
     nhiemvuloi = int(input(f'{thanh} {luc}Lỗi Bao Nhiêu Nhiệm Vụ Thì Xóa Cookie{trang}: {vang}'))
     config = {
         "apikey": apikey,
@@ -741,9 +741,9 @@ def Main():
             print(f'{thanh} {luc}Api Key 3xCapcha{trang}: {vang}{apikey}')
             print(f'{thanh} {luc} Min{trang}: {vang}{min}')
             print(f'{thanh} {luc} Max{trang}: {vang}{max}')
-            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc} Bao Nhiêu Job Thì Chống Block')
-            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc} Bao Nhiêu Job Thì Nghỉ Ngơi {vang}{delaybl}')
-            print(f'{thanh} {luc}Sau {vang}{doinick} {luc} Bao Nhiêu JobThì Đổi Nick')
+            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc} Job Thì Chống Block')
+            print(f'{thanh} {luc}Sau {vang}{nvblock} {luc} Job Thì Nghỉ Ngơi {vang}{delaybl}')
+            print(f'{thanh} {luc}Sau {vang}{doinick} {luc} Job Thì Đổi Nick')
             print(f'{thanh} {luc}Lỗi {vang}{nhiemvuloi} {luc}Bao Nhiêu Job Thì Đổi Job Khác')
         chon = input(f'{thanh} {luc}Bạn Có Muốn Sử Dụng Cấu Hình Lúc Trước? {red}({vang}y/n{red}){trang}: {vang}')
         if chon == 'y':
@@ -779,7 +779,7 @@ def Main():
     thanhngang(70)
     while True:
         if len(listck) == 0:
-            print(f'{red}Đã Xoá Tất Cả Cookie Do Cookie Die, Vui Lòng Nhập Lại Cookie Mới')
+            print(f'{red}Đã Xoá Tất Cả Cookie Do Cookie Die Hoặc Acc Ch Thêm Cấu Hình, Vui Lòng Nhập Lại Cookie Mới')
             listck = Nhap_Cookie()
             with open('Cookie_FB.txt', 'w') as f:
                 json.dump(listck, f)
