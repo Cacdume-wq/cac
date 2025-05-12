@@ -722,7 +722,7 @@ def Main():
     print(f'{thanh} {luc}Nhập {red}[{vang}0{red}] {luc}Để Chạy Job REACTIONTHUONG')
     print(f'{thanh} {lam}Có Thể Chọn Nhiều Nhiệm Vụ (Ví Dụ: 123...)')
     thanhngang(70)
-    nhap = input(f'{thanh} {luc}Nhập Số Để Chọn JOB {luv}: ')
+    nhap = input(f'{thanh} {luc}Nhập Số Để Chọn JOB {luc}: ')
     if '' in nhap:
         nhap = nhap.replace('','')
     listnv.append(nhap)
