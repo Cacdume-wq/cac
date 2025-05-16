@@ -46,7 +46,7 @@ for i in range(1, 101):
   sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
   sys.stdout.flush()
   sleep(0.003)  # Điều chỉnh thời gian chờ nếu cần
-print("Load tool thành công! Mời bn dùng ạ 😍")
+print(f"Load tool thành công! Mời bn dùng ạ 😍")
 sleep(1)
 def banner():
     os.system("cls" if os.name == "nt" else "clear")
@@ -78,15 +78,15 @@ def Delay(value):
 	while not(value <= 1):
 		value -= 0.123
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}█    {trang}]''', '               ', end = '\r')
-		sleep(0.010)
+		sleep(0.001)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [ {vang}█   {trang}]''', '               ', end = '\r')
-		sleep(0.010)
+		sleep(0.001)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [  {vang}█  {trang}]''', '               ', end = '\r')
-		sleep(0.010)
+		sleep(0.001)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [   {vang}█ {trang}]''', '               ', end = '\r')
-		sleep(0.010)
+		sleep(0.001)
 		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [    {vang}█{trang}]''', '               ', end = '\r')
-		sleep(0.010)
+		sleep(0.001)
 def decode_base64(encoded_str):
 	decoded_bytes = base64.b64decode(encoded_str)
 	decoded_str = decoded_bytes.decode('utf-8')
