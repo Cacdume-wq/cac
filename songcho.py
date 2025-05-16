@@ -34,12 +34,19 @@ def banner():
     os.system("cls" if os.name == "nt" else "clear")
     banner = f"""
                   {trang}{hong}© Bản Quyền PhuocAn ! Tool Lỏ !!!
-                  
-\033[1;34m██████╗ ██╗  ██╗██╗   ██╗ ██████╗  ██████╗                                            
-\033[1;31m██████╔╝███████║██║   ██║██║   ██║██║                         
-\033[1;35m██╔═══╝ ██╔══██║██║   ██║██║   ██║██║                           
-\033[1;36m██║     ██║  ██║╚██████╔╝╚██████╔╝╚██████╗                      
-\033[1;31m╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ """
+═════════════════════════════════════════════════════════════════║
+\033[1;32m║➢ TOOL BY    :          Phước (ADMIN)                                                    ║
+\033[1;36m║➢ ADMIN  :   Phước An                               ║  
+\033[1;31m║➣ ZALO HỖ TRỢ :  0915948201 ( PHƯỚC AN )                                                    ║   
+\033[1;37m╚═══════════════════════════════════════════════════════╝
+\033[1;39m              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+\033[1;39m              ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+\033[1;97m= = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+\033[1;39m┌──────────────────────── ADMIN ────────────────────────┐
+\033[1;32m║   \033[1;39mPYTHON\033[1;32m 3.12                                   \033[1;32m║
+\033[1;32m║   \033[1;39mTOOL         :  TDS FACEBOOK                              \033[1;32m║
+\033[1'32m║   \033[1;39mZALO               :   0915948201                             \033[1;32m║ 
+\033[1;39m└────────────────────────────────────────────────────────┘ """
     print(banner)
     thanhngang(65)
     print(f'''{thanh} {luc}Admin{luc}: {tim}{hong}PhuocAn
@@ -52,15 +59,15 @@ def banner():
 def Delay(value):
 	while not(value <= 1):
 		value -= 0.123
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}X    {trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}█    {trang}]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [ {vang}X   {trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [ {vang}█   {trang}]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [  {vang}X  {trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [  {vang}█  {trang}]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [   {vang}X {trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [   {vang}█ {trang}]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [    {vang}X{trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [    {vang}█{trang}]''', '               ', end = '\r')
 		sleep(0.010)
 def decode_base64(encoded_str):
 	decoded_bytes = base64.b64decode(encoded_str)
@@ -654,6 +661,11 @@ def Main():
                     os.remove('acc_tds_log.txt')
                 elif chon == '1':
                     pass
+		    # Hiệu ứng tải
+                    for i in range(1, 101):
+                     sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
+                     sys.stdout.flush()
+                     sleep(0.03)  # Điều chỉnh thời gian chờ nếu cần
                 else:
                     print(f'{thanh} {red}Vui Lòng Chọn Đúng')
                     thanhngang(70)
@@ -688,8 +700,12 @@ def Main():
             chon = input(f'{thanh} {luc}Nhập{trang}: ')
             thanhngang(70)
             if chon == '1':
-                print(f'{luc}Đang Lấy Dữ Liệu Đã Lưu')
-                sleep(0)
+                print(f'{luc}Đang Lấy Dữ Liệu Đã Lưu...')
+		    # Hiệu ứng tải
+                for i in range(1, 101):
+                 sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
+                 sys.stdout.flush()
+                 sleep(0.03)  # Điều chỉnh thời gian chờ nếu cần
                 with open('Cookie_FB.txt', 'r') as f:
                     listck = json.loads(f.read())
                     break
@@ -824,7 +840,7 @@ def Main():
                 listck.remove(ck)
                 continue
             if chonan == 'y':
-                uid2 = uid[:3]+'#'*(len(uid)-6)+uid[-3:]
+                uid2 = uid[:4]+'#'*(len(uid)-6)+uid[-4:]
             else:
                 uid2 = uid
             cauhinh = tds.facebook_configuration(uid)
