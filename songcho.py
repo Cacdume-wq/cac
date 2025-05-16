@@ -6,6 +6,7 @@ import requests, json, base64, os, uuid, re
 from time import sleep
 from random import randint
 from datetime import datetime
+import os,sys
 red = "\033[1;31m"
 do = "\033[1;31m"
 luc = "\033[1;32m"
@@ -14,6 +15,15 @@ trang = "\033[1;37m"
 tim = "\033[1;35m"
 lam = "\033[1;36m"
 hong = "🌸"
+RESET = "\033[0m"
+BOLD = "\033[1m"
+CYAN = "\033[96m"
+MAGENTA = "\033[95m"
+YELLOW = "\033[93m"
+GREEN = "\033[92m"
+BLUE = "\033[94m"
+AQUA = "\033[96m"
+LIME = "\033[92m"
 thanh = f'{red}[{trang}</>{red}] {trang}=>'
 listnv = []
 listck = []
@@ -30,6 +40,15 @@ def thanhngang(so):
         print(trang+'-',end ='')
     print('')
 
+print("Chờ tí,đợi load tool...")
+# Hiệu ứng tải
+for i in range(1, 101):
+  sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
+  sys.stdout.flush()
+  sleep(0.003)  # Điều chỉnh thời gian chờ nếu cần
+print("Load tool thành công! 
+      Mời bn dùng ạ 😍")
+sleep(1)
 def banner():
     os.system("cls" if os.name == "nt" else "clear")
     banner = f"""
@@ -49,12 +68,12 @@ def banner():
 \033[1;39m└────────────────────────────────────────────────────────┘ """
     print(banner)
     thanhngang(65)
-    print(f'''{thanh} {luc}Admin{luc}: {tim}{hong}PhuocAn
+    print(f'''{thanh} {luc}Admin{luc}:{tim}{hong}PhuocAn
 {thanh} {luc} Code By{trang}: {tim}{hong}Đàm Hữu Phước
 {thanh} {luc}Link Box{trang}: {tim}{hong}https://zalo.me/g/tiyghf833
 {thanh} {luc}TikTok{trang}: {tim}{hong}@phuocan.123
 {thanh} {luc}Youtube{trang}: {tim}{hong}@phuocan.9999
-{thanh} {luc}Bạn Đang Sử Dụng Tool{trang}: {vang}{hong}Trao Đổi Sub Facebook Lỏ 😭''')
+{thanh} {luc}Bạn Đang Sử Dụng Tool{trang}: {vang}{hong}Trao Đổi Sub Facebook Lỏ Như Chym Bé Hoàng 😭''')
     thanhngang(65)
 def Delay(value):
 	while not(value <= 1):
@@ -693,7 +712,7 @@ def Main():
             os.remove('acc_tds_log.txt')
     thanhngang(70)
     while True:
-        if os.path.exists('Cookie_FB.txt'):
+        if os.path.exists('cookie.txt'):
             print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Để log cookie fb cũ 🔫')
             print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Để thay cookie mới 🔫')
             thanhngang(70)
@@ -706,18 +725,18 @@ def Main():
                  sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
                  sys.stdout.flush()
                  sleep(0.03)  # Điều chỉnh thời gian chờ nếu cần
-                with open('Cookie_FB.txt', 'r') as f:
+                with open('cookiefb.txt', 'r') as f:
                     listck = json.loads(f.read())
                     break
             elif chon == '2':
-                os.remove('Cookie_FB.txt')
+                os.remove('cookiefb.txt')
             else:
                 print(f'{thanh} {red}Mù à?Nhập lại')
                 thanhngang(70)
                 continue
-        if not os.path.exists('Cookie_FB.txt'):
+        if not os.path.exists('cookiefb.txt'):
             listck = Nhap_Cookie()
-            with open('Cookie_FB.txt', 'w') as f:
+            with open('cookiefb.txt', 'w') as f:
                 json.dump(listck, f)
             break
     banner()
@@ -753,7 +772,7 @@ def Main():
             delaybl = config['delaybl']
             doinick = config['doinick']
             nhiemvuloi = config['nhiemvuloi']
-            print(f'{thanh} {luc}Đã Thấy Cấu Hình Cũ')
+            print(f'{thanh} {luc}Đã Thấy Cấu Hình Lúc Trước!!')
             print(f'{thanh} {luc}Api Key 3xCapcha{trang}: {vang}{apikey}')
             print(f'{thanh} {luc} Min{trang}: {vang}{min}')
             print(f'{thanh} {luc} Max{trang}: {vang}{max}')
@@ -910,7 +929,7 @@ def Main():
                                 like = fb.reaction(id, type)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}{type}{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(0)
+                                    Delay(2)
                                     loireaction += 1
                                 else:
                                     nhan = tds.get_xu_vip('facebook_reaction', code)
@@ -971,7 +990,7 @@ def Main():
                                 like = fb.reactioncmt(id, type)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}{type}CMT{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(0)
+                                    Delay(2)
                                     loicxcmt += 1
                                 else:
                                     nhan = tds.get_xu_vip('facebook_reactioncmt', code)
@@ -1031,7 +1050,7 @@ def Main():
                             like = fb.share(id)
                             if like == False:
                                 print(f"{luc}FAIL {lam}SHARE{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                Delay(0)
+                                Delay(2)
                                 loishare += 1
                             else:
                                 nhan = tds.get_xu_vip('facebook_share', code)
@@ -1092,7 +1111,7 @@ def Main():
                                 like = fb.follow(id)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}FOLLOW{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(0)
+                                    Delay(2)
                                     loifollow += 1
                                 else:
                                     duyet = tds.cache('facebook_follow_cache', code)
@@ -1160,7 +1179,7 @@ def Main():
                                 like = fb.like_page(id)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}LIKEPAGE{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(0)
+                                    Delay(2)
                                     loipage+=1
                                 else:
                                     duyet = tds.cache('facebook_page_cache', code)
@@ -1226,7 +1245,7 @@ def Main():
                             like = fb.group(idpost)
                             if like == False:
                                 print(f"{luc}FAIL {lam}GROUP{trang}: {vang}{idpost}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                Delay(0)
+                                Delay(2)
                                 loigr += 1
                             else:
                                 nhan = tds.get_xu_thuong('GROUP', idpost)
@@ -1284,7 +1303,7 @@ def Main():
                             share = fb.share(idpost)
                             if share == False:
                                 print(f"{luc}FAIL {lam}SHARE{trang}: {vang}{idpost}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                Delay(0)
+                                Delay(2)
                                 loisharet += 1
                             else:
                                 nhan = tds.get_xu_thuong('SHARE', idpost)
@@ -1342,7 +1361,7 @@ def Main():
                                 like = fb.like_page(idpost)
                                 if like == False:
                                     print(f"{luc}FAIL {lam}LIKEPAGE{trang}: {vang}{idpost}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(0)
+                                    Delay(2)
                                     loipage+=1
                                 else:
                                     nhan = tds.get_xu_thuong('PAGE', idpost)
@@ -1401,7 +1420,7 @@ def Main():
                                 like = fb.reaction(id, 'LIKE')
                                 if like == False:
                                     print(f"{luc}FAIL {lam}LIKETHUONG{trang}: {vang}{id}            ", end = '\r'); sleep(0); print('                                                       ', end = '\r')
-                                    Delay(0)
+                                    Delay(2)
                                     loiliket+=1
                                 else:
                                     nhan = tds.get_xu_thuong('LIKE', idpost)
