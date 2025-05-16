@@ -46,8 +46,7 @@ for i in range(1, 101):
   sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
   sys.stdout.flush()
   sleep(0.003)  # Điều chỉnh thời gian chờ nếu cần
-print("Load tool thành công! 
-      Mời bn dùng ạ 😍")
+print("Load tool thành công! Mời bn dùng ạ 😍")
 sleep(1)
 def banner():
     os.system("cls" if os.name == "nt" else "clear")
