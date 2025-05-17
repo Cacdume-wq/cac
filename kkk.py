@@ -14,6 +14,14 @@ from datetime import datetime
 from time import sleep
 from random_user_agent.user_agent import UserAgent
 from random_user_agent.params import SoftwareName, OperatingSystem
+print("Chờ tí đi,đang load file và tool!!!")
+# Hiệu ứng tải
+for i in range(1, 101):
+ sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOAD FILE TOOL: {i}% {'█' * (i // 5)}{RESET}")
+ sys.stdout.flush()
+ sleep(0.03)
+
+
 def bes4(url):
     try:
         response = requests.get(url, timeout=5)
@@ -71,12 +79,11 @@ def banner():
 \033[1;35m██╔═══╝ ██╔══██║██║   ██║██║   ██║██║                           
 \033[1;36m██║     ██║  ██║╚██████╔╝╚██████╔╝╚██████╗                      
 \033[1;32m╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ 
-\033[1;97mTool By: \033[1;32mPhuoc Code      \033[1;97mPhiên Bản: \033[1;32m2.1     
+\033[1;97mTool By: \033[1;32mPhuoc Code      \033[1;97mPhiên Bản: \033[1;32m3.2   
 \033[97m════════════════════════════════════════════════  
 \033[1;97m[\033[1;91m❣\033[1;97m]\033[1;97m Youtube\033[1;31m  : \033[1;97m☞ \033[1;36m@phuocan.9999\033[1;31m♔ \033[1;97m☜
 \033[1;97m[\033[1;91m❣\033[1;97m]\033[1;97m Tik Tok\033[1;31m  : \033[1;33mhttps:\033[1;32m//www.tiktok.com\033[1;31m/@_tinhyeu_k
-\033[1;97m[\033[1;91m❣\033[1;97m]\033[1;97m Box Zalo\033[1;31m  : \033[1;33mhttps:\033[1;32m//zalo.me/\033[1;31m/g/tiyghf833
-\033[97m════════════════════════════════════════════════
+
 """
     print(banner)    
 def getjob(cookie, nv):
@@ -101,15 +108,15 @@ def _encode_to_base64(_data):
 def _delay(value):
 	while not(value <= 1):
 		value -= 0.123
-		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m][\033[1;33mX  \033[1;39m ]''', '               ', end = '\r')
+		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m][\033[1;33m|\033[1;39m ]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m X   \033[1;39m]''', '               ', end = '\r')
+		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m-\033[1;39m]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m  X  \033[1;39m]''', '               ', end = '\r')
+		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m/\033[1;39m]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m   X \033[1;39m]''', '               ', end = '\r')
+		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m-033[1;39m]''', '               ', end = '\r')
 		sleep(0.010)
-		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m    X\033[1;39m]''', '               ', end = '\r')
+		print(f'''\033[1;39m[\033[1;36MP-TOOL\033[1;32m][ \033[1;36mDELAY \033[1;35m][\033[1;36m{str(value)[0:5]}\033[1;36m[\033[1;33m|\033[1;39m]''', '               ', end = '\r')
 		sleep(0.010)
 def countdown(value):
 	while not(value <= 1) :
