@@ -68,8 +68,8 @@ def banner():
     print(banner)
     thanhngang(65)
     print(f'''{thanh} {luc}Admin{luc}:{tim}{hong}PhuocAn
-{thanh} {luc} Code By{trang}: {tim}{hong}Đàm Hữu Phước
-{thanh} {luc}Link Box{trang}: {tim}{hong}https://zalo.me/g/tiyghf833
+{thanh} {luc}Code By{trang}: {tim}{hong}Đàm Hữu Phước
+{thanh} {luc}Link Box{trang}: {tim}{hong}
 {thanh} {luc}TikTok{trang}: {tim}{hong}@phuocan.123
 {thanh} {luc}Youtube{trang}: {tim}{hong}@phuocan.9999
 {thanh} {luc}Bạn Đang Sử Dụng Tool{trang}: {vang}{hong}Trao Đổi Sub Facebook Lỏ Như Chym Bé Hoàng 😭''')
@@ -77,15 +77,13 @@ def banner():
 def Delay(value):
 	while not(value <= 1):
 		value -= 0.123
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}█    {trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}|{trang}]''', '               ', end = '\r')
 		sleep(0.001)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [ {vang}█   {trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}/{trang}]''', '               ', end = '\r')
 		sleep(0.001)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [  {vang}█  {trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}|{trang}]''', '               ', end = '\r')
 		sleep(0.001)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [   {vang}█ {trang}]''', '               ', end = '\r')
-		sleep(0.001)
-		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [    {vang}█{trang}]''', '               ', end = '\r')
+		print(f'''{trang}[{hong}PTOOL{tim}] [{hong}DELAY{trang}] [{hong}{str(value)[0:5]}{trang}] [{vang}/{trang}]''', '               ', end = '\r')
 		sleep(0.001)
 def decode_base64(encoded_str):
 	decoded_bytes = base64.b64decode(encoded_str)
@@ -711,14 +709,14 @@ def Main():
             os.remove('acc_tds_log.txt')
     thanhngang(70)
     while True:
-        if os.path.exists('cookie.txt'):
+        if os.path.exists('cookiefb.txt'):
             print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Để log cookie fb cũ 🔫')
             print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Để thay cookie mới 🔫')
             thanhngang(70)
             chon = input(f'{thanh} {luc}Nhập{trang}: ')
             thanhngang(70)
             if chon == '1':
-                print(f'{luc}Đang Lấy Dữ Liệu Đã Lưu...')
+                print(f'{luc}Đang Lấy Dữ Liệu Đã Lưu Từ Trước...')
 		    # Hiệu ứng tải
                 for i in range(1, 101):
                  sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
@@ -756,7 +754,7 @@ def Main():
     print(f'{thanh} {luc}Nhập {red}[{vang}0{red}] {luc}Để Chạy Job REACTIONTHUONG')
     print(f'{thanh} {lam}Có Thể Chọn Nhiều Nhiệm Vụ (Ví Dụ: 123...)')
     thanhngang(70)
-    nhap = input(f'{thanh} {luc}Nhập Số Để Chọn JOB {luc}: ')
+    nhap = input(f'{thanh} {vang}{hong}Nhập Số Để Chọn JOB {vang}: ')
     if '' in nhap:
         nhap = nhap.replace('','')
     listnv.append(nhap)
@@ -789,7 +787,12 @@ def Main():
             doinick = config['doinick']
             nhiemvuloi = config['nhiemvuloi']
         else:
-            print(f'{thanh} {luc}Đã Xóa Cấu Hình Cũ')
+            print(f'{thanh} {luc}Đang Xóa Cấu Hình Cũ!!')
+            # Hiệu ứng tải
+            for i in range(1, 101):
+             sys.stdout.write(f"\r{BOLD}{LIME}ĐANG LOADING: {i}% {'█' * (i // 5)}{RESET}")
+             sys.stdout.flush()
+             sleep(0.03)  
             thanhngang(70)
             os.remove('settingch.json')
             config = Nhap_Setting()
@@ -809,11 +812,11 @@ def Main():
         delaybl = config['delaybl']
         doinick = config['doinick']
         nhiemvuloi = config['nhiemvuloi']
-    chonan = input(f'{thanh} {luc}Bạn Muốn Ẩn ID Fb Không?{red}({vang}y/n{red}){trang}: {vang}')
+    chonan = input(f'{thanh} {luc}Bạn Muốn Ẩn ID Fb Không?{red}({luc}y/n{red}){trang}: {vang}')
     thanhngang(70)
     while True:
         if len(listck) == 0:
-            print(f'{red}Đã Xoá Tất Cả Cookie Do Cookie Die Hoặc Acc Ch Thêm Cấu Hình, Vui Lòng Nhập Lại Cookie Mới')
+            print(f'{red}Đã Xoá Tất Cả Cookie Do Cookie Die Hoặc Acc Ch Thêm Cấu Hình, Vui Lòng Nhập Lại Cookie Mới!!!')
             listck = Nhap_Cookie()
             with open('Cookie_FB.txt', 'w') as f:
                 json.dump(listck, f)
