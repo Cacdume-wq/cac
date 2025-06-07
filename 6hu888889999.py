@@ -73,9 +73,7 @@ def banner():
 """
     print(banner)
     thanhngang(65)
-    print(f'''{thanh} {luc}Admin{luc}: {tim}{hong}PhuocAn
-{thanh} {luc}Code By{trang}: {tim}{hong}Đàm Hữu Phước
-{thanh} {luc}Bạn Đang Sử Dụng Tool{trang}: {vang}{hong}Trao Đổi Sub Facebook Lỏ 😭''')
+    print(f'''{thanh} {luc}Admin{luc}: {tim}{hong}PhuocAn {luc}Code By{trang}: {tim}{hong}Đàm Hữu Phướ {luc}Bạn Đang Sử Dụng Tool{trang}: {vang}{hong}Trao Đổi Sub Facebook Lỏ 😭''')
     thanhngang(65)
  
 def Delay(value):
@@ -635,9 +633,9 @@ def Main():
     dem = 0
     count = 0
     banner()
-    print(f'{thanh} {luc}Proxy Dạng{trang}: {vang}username:password@host:port')
+    print(f' {luc}Proxy Dạng{trang}: {vang}username:password@host:port')
     print(red+"-"*70)
-    filename = input(f"{thanh} {luc}Nhập File Txt Chứa Proxy (Enter để bỏ qua){trang}: ")
+    filename = input(f"{luc}Nhập File Txt Chứa Proxy (Enter để bỏ qua){trang}: ")
     print(red+"-"*70)
     proxy_list = read_proxy_file(filename)
     proxy_index = 0
@@ -674,10 +672,10 @@ def Main():
             tds = TraoDoiSub_Api(username, password, current_proxy)
             profile = tds.info()
             try:
-                print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Để Chạy Acc Tài Khoản {vang}{profile[1]}')
-                print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Nhập Tài Khoản Trao Đổi Sub Mới')
+                print(f'{luc}Nhập {red}[{vang}1{red}] {luc}Để Chạy Acc Tài Khoản {vang}{profile[1]}')
+                print(f'{luc}Nhập {red}[{vang}2{red}] {luc}Nhập Tài Khoản Trao Đổi Sub Mới')
                 thanhngang(70)
-                chon = input(f'{thanh} {luc}Nhập{trang}: ')
+                chon = input(f'{luc}Nhập{trang}: ')
                 thanhngang(70)
                 if chon == '2':
                     os.remove('acc_tds_log.txt')
@@ -689,11 +687,11 @@ def Main():
                       sys.stdout.flush()
                       time.sleep(0.003)  # Điều chỉnh thời gian chờ nếu cần
                 else:
-                    print(f'{thanh} {red}Vui Lòng Chọn Đúng Số!')
+                    print(f'{red}Vui Lòng Chọn Đúng Số!')
                     thanhngang(70)
                     continue
             except:
-                print(f'''{thanh} {luc}Trạng Thái Acc{trang}: {trang}[{red}DIE{trang}]\n{thanh} {luc}Tin Nhắn{trang}: {luc}Đăng Nhập Thất Bại''')
+                print(f'''{luc}Trạng Thái Acc{trang}: {trang}[{red}DIE{trang}]\n{thanh} {luc}Tin Nhắn{trang}: {luc}Đăng Nhập Thất Bại''')
                 os.remove('acc_tds_log.txt')
         if not os.path.exists('acc_tds_log.txt'):
             username, password = input(f'{thanh} {luc}Nhập Tài Khoản TDS{trang}: '), input(f'{thanh} {luc}Nhập Mật Khẩu TDS{trang}: ')
@@ -716,8 +714,8 @@ def Main():
     thanhngang(70)
     while True:
         if os.path.exists('Cookie_FB.txt'):
-            print(f'{thanh} {luc}Nhập {red}[{vang}1{red}] {luc}Để log cookie fb cũ 🔫')
-            print(f'{thanh} {luc}Nhập {red}[{vang}2{red}] {luc}Để thay cookie mới 🔫')
+            print(f'{luc}Nhập {red}[{vang}1{red}] {luc}Để log cookie fb cũ 🔫')
+            print(f'{luc}Nhập {red}[{vang}2{red}] {luc}Để thay cookie mới 🔫')
             thanhngang(70)
             chon = input(f'{thanh} {luc}Nhập{trang}: ')
             thanhngang(70)
