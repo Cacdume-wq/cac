@@ -840,7 +840,7 @@ def Main():
                                     dem+=1
                                     time = datetime.now().strftime("%H:%M:%S")
                                     print(f"\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKEVIP\033[1;31m|\033[1;35m+1100xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{time}")
-				    loilike = 0
+				         loilike = 0
                                     if dem % doinick == 0:
                                         ptool = 1
                                         break
