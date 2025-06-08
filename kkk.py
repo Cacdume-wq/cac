@@ -915,7 +915,7 @@ def Main():
                                     dem+=1
                                     time = datetime.now().strftime("%H:%M:%S")
                                     print(f'[{dem:04d}][{time}][{uid_hidden}][+300][{xu}][LIKETHUONG]')
-                                    loilike = 0
+                                        loilike = 0
                                     if dem % doinick == 0:
                                         ptool = 1
                                         break
