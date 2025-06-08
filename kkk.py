@@ -725,7 +725,7 @@ def Main():
     delaybl = input(Colorate.Diagonal(Colors.green_to_red, "Sau {nvblock} Giây Chống Block : "))
     doinick = input(Colorate.Diagonal(Colors.green_to_red, "Sau Bao Nhiêu NV Đổi Acc : "))
     nhiemvuloi = input(Colorate.Diagonal(Colors.green_to_red, "Lỗi Bao Nhiêu NV Thì Xóa Cookie : "))
-    print (Colorate.Diagonal(Colors.black_to_white,"═══════════════════════════════════════"))print ("\033[1;36m═"*55)
+    print (Colorate.Diagonal(Colors.black_to_white,"═══════════════════════════════════════"))
     nhiemvu = input(Colorate.Diagonal(Colors.green_to_red,f"Nhập Số : "))
     min = input(Colorate.Diagonal(Colors.green_to_red,f"Nhập Delay Nhỏ Nhất ( Min ): "))
     max = input(Colorate.Diagonal(Colors.green_to_red,f"Nhập Delay Cao Nhất ( Max ): "))
@@ -839,7 +839,7 @@ def Main():
                                     xu = "{:,}".format(int(xu))
                                     dem+=1
                                     time = datetime.now().strftime("%H:%M:%S")
-                                    print(f"\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKEVIP\033[1;31m|\033[1;35m+1100xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{h}:{m}:{s}")
+                                    print(f"\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKEVIP\033[1;31m|\033[1;35m+1100xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{time}")
 				    loilike = 0
                                     if dem % doinick == 0:
                                         ptool = 1
