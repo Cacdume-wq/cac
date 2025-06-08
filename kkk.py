@@ -701,21 +701,31 @@ def Main():
                 json.dump(listck, f)
                 break
     banner()
-    print("\033[1;36m═"*55)
+    print("\033[1;35m═"*55)
     print(f"\033[1;32mTên TK TTC: \033[1;33m{user} \033[1;31m| \033[1;32mXu Hiện Tại Đang Có: \033[1;39m{sodu} ")
-    print("\033[1;36m═"*55)
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m1\033[1;31m]\033[1;35m ĐỂ CHẠY JOB LIKEXUCAO")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m2\033[1;31m]\033[1;35m ĐỂ CHẠY JOB LIKEGIARE")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m3\033[1;31m]\033[1;35m ĐỂ CHẠY JOB REACTIONXUCAO")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m4\033[1;31m]\033[1;35m ĐỂ CHẠY JOB REACTIONGIARE")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m5\033[1;31m]\033[1;35m ĐỂ CHẠY JOB REACTIONCMT")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m6\033[1;31m]\033[1;35m ĐỂ CHẠY JOB CMT")  
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m7\033[1;31m]\033[1;35m ĐỂ CHẠY JOB SHARE")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m8\033[1;31m]\033[1;35m ĐỂ CHẠY JOB LIKEPAGE ")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m NHẬP \033[1;31m[\033[1;33m9\033[1;31m]\033[1;35m ĐỂ CHẠY JOB FOLLOW ")
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m] \033[1;31m[\033[1;33mx\033[1;31m]\033[1;35m Có Thể Chọn Nhiều Nhiệm Vụ Khác nhau \033[1;31m(\033[1;33mVD: 12345...\033[1;31m)  ")   
-    print(f"\033[1;39m[\033[1;31m</>\033[1;39m] \033[1;31m[\033[1;33mF\033[1;31m]\033[1;35mKHUYẾN NGHỊ NÊN CHỌN CÁC JOB GỢI Ý ĐỂ TRÁNH CP956 \033[1;31m(\033[1;33MJOB KHUYẾN NGHỊ : 12345 hoặc 1\033[1;31m")
-    print ("\033[1;36m═"*55)
+    print("\033[1;35m═"*55)
+    print (Colorate.Diagonal(Colors.black_to_white,"═══════════════════════════════════════"))
+    print(f"\033[1;32mTên Tài Khoản: \033[1;33m{user} \033[1;31m| \033[1;32mXu Hiện Tại: \033[1;33m{sodu} ")
+    print (Colorate.Diagonal(Colors.black_to_white,"═══════════════════════════════════════"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 1 ]  ĐỂ CHẠY NHIỆM VỤ LIKEVIP"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 2 ]  ĐỂ CHẠY NHIỆM VỤ LIKETHUONG"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 3 ]  ĐỂ CHẠY NHIỆM VỤ REACTION XU CAO"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 4 ]  ĐỂ CHẠY NHIỆM VỤ REACTIONTHUONG"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 5 ]  ĐỂ CHẠY NHIỆM VỤ REACTION CMT "))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 6 ]  ĐỂ CHẠY NHIỆM VỤ COMMENTCHEO"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 7 ]  ĐỂ CHẠY NHIỆM VỤ SHARECHEO"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 8 ]  ĐỂ CHẠY NHIỆM VỤ LIKEPAGRCHEO"))
+    print(Colorate.Diagonal(Colors.green_to_red,f"NHẬP [ 9 ]  ĐỂ CHẠY NHIỆM VỤ FOLLOWCHEO"))
+    print(Colorate.Diagonal(Colors.red_to_green,f"Có Thể Chọn Nhiều Nhiệm Vụ VD: 123...)  "))
+    print (Colorate.Diagonal(Colors.black_to_white,"═══════════════════════════════════════"))
+    nhiemvu = input(Colorate.Diagonal(Colors.green_to_red,f"Nhập Số : "))
+    min = input(Colorate.Diagonal(Colors.green_to_red,f"Nhập Delay Nhỏ Nhất ( Min ): "))
+    max = input(Colorate.Diagonal(Colors.green_to_red,f"Nhập Delay Cao Nhất ( Max ): "))
+    nvblock = int(input(Colorate.Diagonal(Colors.green_to_red, "Nhập Số NV Chống Block : ")))
+    delaybl = input(Colorate.Diagonal(Colors.green_to_red, "Sau {nvblock} Giây Chống Block : "))
+    doinick = input(Colorate.Diagonal(Colors.green_to_red, "Sau Bao Nhiêu NV Đổi Acc : "))
+    nhiemvuloi = input(Colorate.Diagonal(Colors.green_to_red, "Lỗi Bao Nhiêu NV Thì Xóa Cookie : "))
+    print (Colorate.Diagonal(Colors.black_to_white,"═══════════════════════════════════════"))print ("\033[1;36m═"*55)
     nhiemvu = input (f'\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m Nhập Số Để Chọn Job Muốn Chạy \033[1;39m:\033[1;33m ')
     min = int(input(f'\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m Delay Min\033[1;39m: \033[1;33m'))
     max = int(input(f'\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m Delay Max\033[1;39m: \033[1;33m'))
@@ -723,7 +733,7 @@ def Main():
     delaybl = int(input(f'\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m Sau\033[1;33m {nvblock} \033[1;32mJob Thì Được Nghỉ Ngơi\033[1;39m: \033[1;35m'))
     doinick = int(input(f'\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m Sau Bao Nhiêu Job Thì Bật Đổi Nick\033[1;39m:\033[1;35m '))
     nhiemvuloi = int(input(f'\033[1;39m[\033[1;31m</>\033[1;39m]\033[1;32m Lỗi Bao Nhiêu Job Thì Bật Xóa Cookie\033[1;39m:\033[1;35m '))
-    print ("\033[1;36m═"*55)
+    print ("\033[1;35m═"*55)
     while True:
         if len(listck) == 0:
             print(f'\033[1;35mĐã Xoá Tất Cả Cookie, \033[1;36mVui Lòng Nhập Lại Cookie Khác!!!')
@@ -756,9 +766,7 @@ def Main():
             }
             cauhinh = requests.post('https://tuongtaccheo.com/cauhinh/datnick.php',headers=headers, data=data, timeout=5).text
             if '1' in cauhinh:
-                print("\033[1;39m═"*55)
                 print(f"\033[1;32mĐang Chạy UID FB\033[1;39m: \033[1;33m{uidfb} \033[1;31m| \033[1;32mTên FB\033[1;39m: \033[1;33m{tenfb}")
-                print("\033[1;39m═"*55)
             else:
                 print("\033[1;39m═"*55)
                 print(f"\033[1;32mCấu Hình Không Thành Công UID FB\033[1;39m: \033[1;33m{uidfb} \033[1;31m| \033[1;32mTên FB\033[1;39m: \033[1;33m{tenfb}")
@@ -831,8 +839,8 @@ def Main():
                                     xu = "{:,}".format(int(xu))
                                     dem+=1
                                     time = datetime.now().strftime("%H:%M:%S")
-                                    print(f'\033[1;31m[\033[1;33m{dem:0}\033[1;31m][\033[1;36m{time}\033[1;31m][\033[1;33mLIKEVIP\033[1;31m][\033[1;39m{uid_hidden}\033[1;31m][\033[1;33m+1100xu\033[1;31m][\033[1;32m{xu}\033[1;31m]')
-                                    loilike = 0
+                                    print(f"\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKEVIP\033[1;31m|\033[1;35m+1100xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{h}:{m}:{s}")
+				    loilike = 0
                                     if dem % doinick == 0:
                                         ptool = 1
                                         break
