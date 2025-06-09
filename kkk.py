@@ -839,7 +839,7 @@ def Main():
                                     xu = "{:,}".format(int(xu))
                                     dem+=1
                                     time = datetime.now().strftime("%H:%M:%S")
-                                    print(f"\033[1;31m|\033[1;31m{dem:04d}\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKEVIP\033[1;31m|\033[1;35m+1100xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{time}")
+                                    print(f"\033[1;31m|\033[1;31m{dem:04d}\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKEVIP\033[1;31m|\033[1;35m+1100xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{time}')
 				    
                                     if dem % doinick == 0:
                                         ptool = 1
@@ -914,7 +914,7 @@ def Main():
                                     xu = get.split('"soduchinh">')[1].split('<')[0]
                                     dem+=1
                                     time = datetime.now().strftime("%H:%M:%S")
-                                    print(f'\033[1;31m|{dem:04d}\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKETHUONG\033[1;31m|\033[1;35m+600xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{h}:{m}:{s}")
+                                    print(f'\033[1;31m|{dem}\033[1;31m|\033[1;36mPhuocDEV\033[1;31m|\033[1;32mLIKETHUONG\033[1;31m|\033[1;35m+600xu\033[1;31m|\033[1;35m{uid_hidden}\033[1;31m|\033[1;33m{xu}\033[1;31m|\033[1;34m{user}\033[1;31m|\033[1;36m{h}:{m}:{s}')
 				    
                                     if dem % doinick == 0:
                                         ptool = 1
